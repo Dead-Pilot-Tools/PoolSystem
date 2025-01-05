@@ -1,13 +1,14 @@
 {
-  "name": "com.deadpilottools.tooltemplate",
+  "name": "com.deadpilottools.poolsystem",
   "version": "1.0.0",
-  "displayName": "Tool Template",
-  "description": "Template For Unity.SDK development",
+  "displayName": "Pool System",
+  "description": "PoolSystem",
   "unity": "2019.3",
   "documentationUrl": "",
   "changelogUrl": "",
   "licensesUrl": "",
   "keywords": [
-    "tools"
+    "tools",
+    "pool"
   ]
 }

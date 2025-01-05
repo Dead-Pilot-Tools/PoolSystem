@@ -1,9 +1,7 @@
 {
-    "name": "DeadPilotTools.Template.editor",
-    "rootNamespace": "DeadPilotTools.Template.editor",
-    "references": [
-        "GUID:0fe79f82b11acdd4bba7aa31cce0c7b4"
-    ],
+    "name": "DeadPilotTools.PoolSystem.runtime",
+    "rootNamespace": "DeadPilotTools.PoolSystem.runtime",
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
