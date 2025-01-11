@@ -35,11 +35,11 @@ namespace DeadPilotTools.PoolSystem.runtime
         public virtual void OnObjectPoolDestroy() { }
         public virtual void OnPostGet(object data) { }
 
-        public bool IsDataTypeRequired(object data, Type type)
+        public bool IsDataTypeRequired<T>(object data)
         {
-            bool isTypeRequired = (data.GetType() == type);
+            bool isTypeRequired = (data.GetType() == typeof(T));
             if (!isTypeRequired)
-                Debug.LogError($"WRONG DATATYPE!.\r\n data:{data} is {data.GetType()}, should be {type}");
+                Debug.LogError($"WRONG DATATYPE!.\r\n data:{data} is {data.GetType()}, should be {typeof(T)}");
 
             return isTypeRequired;
         }

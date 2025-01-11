@@ -64,7 +64,7 @@ namespace DeadPilotTools.PoolSystem.runtime
 
         public PoolableMonoBehaviour PostGet(object data)
         {
-            PoolableMonoBehaviour pm = objectPool.Get();
+            PoolableMonoBehaviour pm = Get();
             pm.OnPostGet(data);
 
             return pm;
