@@ -57,6 +57,19 @@ namespace DeadPilotTools.PoolSystem.runtime
             return objectPool.Get();
         }
 
+        public PoolableMonoBehaviour GetAtPosition(Vector3 position, Quaternion rotation, Transform parent = null)
+        {
+            PoolableMonoBehaviour pm = Get();
+
+            pm.transform.position = position;
+            pm.transform.rotation = rotation;
+
+            if (parent != null)
+                pm.transform.parent = parent;
+
+            return pm;
+        }
+
         public void Release(PoolableMonoBehaviour pm)
         {
             objectPool.Release(pm);
@@ -64,7 +77,7 @@ namespace DeadPilotTools.PoolSystem.runtime
 
         public PoolableMonoBehaviour PostGet(object data)
         {
-            PoolableMonoBehaviour pm = objectPool.Get();
+            PoolableMonoBehaviour pm = Get();
             pm.OnPostGet(data);
 
             return pm;
